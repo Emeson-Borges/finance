@@ -1,0 +1,20 @@
+Ambiente virtual do Python
+#Ativar
+	# Linux
+		source venv/bin/activate
+	# Windows
+		venv\Scripts\Activate
+
+# Caso algum comando retorne um erro de permissão execute o código e tente novamente:
+
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+pip install django
+pip install pillow
+pip install weasyprint
+
+
+DEPÊNDENCIAS DA BIBLIOTECA 'weasyprint'
+  baixar o compilador GTK:
+				https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer/releases
+				Adicionar o caminho em VARIAVEIS DE AMBIENTE: C:\Program Files\GTK3-Runtime Win64\bin 

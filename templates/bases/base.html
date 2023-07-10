@@ -1,0 +1,58 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="{% static 'geral/css/base.css' %}" rel="stylesheet">
+    <title>{% block 'title' %}{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    {% block 'head' %}{% endblock %}
+  
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #201F1F;">
+        <a class="navbar-brand" style="margin-left: 30px" href="{% url 'home' %}">FINANCE</a>
+        <a class="navbar-brand" style="margin-left: 30px" href="{% url 'gerenciar' %}">GERENCIAR</a>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="extratoDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            CONTAS
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="extratoDropdown">
+            <li class="dropdown-submenu"></li>
+            <li><a class="dropdown-item" href="{% url 'novo_valor' %}">Definir Contas</a></li>
+            <li><a class="dropdown-item" href="{% url 'view_extrato' %}">Ver Contas</a></li>
+          </ul>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="extratoDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            PLANEJAMENTO
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="extratoDropdown">
+            <li class="dropdown-submenu"></li>
+            <li><a class="dropdown-item" href="{% url 'novo_valor' %}">Definir Planejamento</a></li>
+            <li><a class="dropdown-item" href="{% url 'view_extrato' %}">Ver Planejamento</a></li>
+          </ul>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="extratoDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            EXTRATO
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="extratoDropdown">
+            <li class="dropdown-submenu"></li>
+            <li><a class="dropdown-item" href="{% url 'novo_valor' %}">Novo Valor</a></li>
+            <li><a class="dropdown-item" href="{% url 'view_extrato' %}">Ver Extrato</a></li>
+          </ul>
+        </li>        
+       
+        <a class="navbar-brand" style="margin-left: 30px" href="{% url 'dashboard' %}">DASHBOARD</a>
+
+    </nav>
+    {% block 'body' %}{% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

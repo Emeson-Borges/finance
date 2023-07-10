@@ -1,0 +1,29 @@
+body{
+  background-color: #1C1A1A !important;
+  color: white !important;
+}
+
+:root{
+   
+  --main-color: #2B2B2B;
+  --dark-color: #1C1A1A;
+  --contrast-color: #69D2CD;
+  --differential-color: #E96363;
+
+}
+
+
+.dropdown-submenu {
+    list-style-type: none;
+    background-color: blue;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+
+  .dropdown-submenu:not(:first-child) {
+    border-top: 1px solid white;
+  }
+
+  .dropdown-submenu a {
+    color: white;
+  }
